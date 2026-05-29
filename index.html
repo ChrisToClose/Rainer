@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mount Rainier — September is Waiting</title>
+<title>Nicole & John — Mt Rainier + Spartan Race 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,103 +13,135 @@
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'Barlow', sans-serif; background: var(--charcoal); color: var(--snow); overflow-x: hidden; }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes slow-zoom { from { transform: scale(1.04); } to { transform: scale(1.11); } }
+  @keyframes pulse { 0%,100%{opacity:0.4;} 50%{opacity:1;} }
+  .fade-in { opacity:0; transform:translateY(16px); transition:opacity 0.75s ease, transform 0.75s ease; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
 
   /* HERO */
-  .hero { position: relative; height: 100vh; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
-  .hero-img { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1573331592635-f658507c1e8c?fm=jpg&q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center 40%; animation: slow-zoom 20s ease-in-out infinite alternate; }
-  @keyframes slow-zoom { from { transform: scale(1.04); } to { transform: scale(1.11); } }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.72) 100%); }
+  .hero { position: relative; height: 100vh; min-height: 640px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1573331592635-f658507c1e8c?fm=jpg&q=85&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center 40%; animation: slow-zoom 20s ease-in-out infinite alternate; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.8) 100%); }
   .hero-content { position: relative; z-index: 10; text-align: center; padding: 2rem; }
-  @keyframes fade-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; animation: fade-up 1s 0.1s ease both; }
-  .hero-names { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 7rem); font-weight: 700; color: #fff; line-height: 1; text-shadow: 0 2px 40px rgba(0,0,0,0.6); margin-bottom: 0.5rem; animation: fade-up 1s 0.18s ease both; letter-spacing: -0.01em; }
-  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 400; line-height: 1.0; color: #fff; text-shadow: 0 2px 40px rgba(0,0,0,0.5); margin-bottom: 0.3rem; animation: fade-up 1s 0.22s ease both; }
-  .hero-title em { font-style: italic; color: #d0eedd; }
-  .hero-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1rem, 2.5vw, 1.5rem); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; animation: fade-up 1s 0.34s ease both; }
-  .hero-desc { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.88); max-width: 520px; margin: 0 auto; line-height: 1.75; text-shadow: 0 1px 12px rgba(0,0,0,0.6); animation: fade-up 1s 0.46s ease both; }
-  .scroll-cue { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.45); font-family: 'Barlow Condensed', sans-serif; font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; animation: fade-up 1s 0.9s ease both; }
-  .scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent); animation: pulse 2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100%{opacity:0.4;} 50%{opacity:1;} }
+  .hero-from { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; animation: fade-up 1s 0.05s ease both; }
+  .hero-names { font-family: 'Playfair Display', serif; font-size: clamp(4rem, 13vw, 10rem); font-weight: 700; color: #fff; line-height: 0.92; text-shadow: 0 2px 60px rgba(0,0,0,0.7); margin-bottom: 1.2rem; animation: fade-up 1s 0.15s ease both; }
+  .hero-present { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(0.8rem, 2vw, 1.1rem); font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.8rem; animation: fade-up 1s 0.28s ease both; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 4vw, 3rem); font-weight: 400; color: #fff; line-height: 1.2; text-shadow: 0 2px 30px rgba(0,0,0,0.6); margin-bottom: 0.5rem; animation: fade-up 1s 0.38s ease both; }
+  .hero-title em { font-style: italic; color: var(--mist); }
+  .hero-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(0.8rem, 1.8vw, 1rem); font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); animation: fade-up 1s 0.48s ease both; }
+  .scroll-cue { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; animation: fade-up 1s 0.9s ease both; }
+  .scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent); animation: pulse 2s ease-in-out infinite; }
 
   /* PERSONAL NOTE */
-  .personal-note { background: var(--pine); padding: 4.5rem 2rem; border-top: 1px solid rgba(200,168,75,0.2); border-bottom: 1px solid rgba(200,168,75,0.2); }
-  .note-inner { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 56px 1fr; gap: 1.8rem; align-items: start; }
+  .personal-note { background: var(--pine); padding: 4rem 2rem; border-top: 1px solid rgba(200,168,75,0.2); border-bottom: 1px solid rgba(200,168,75,0.2); }
+  .note-inner { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: 56px 1fr; gap: 1.8rem; align-items: start; }
   .note-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--charcoal); flex-shrink: 0; margin-top: 4px; }
   .note-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.5rem; }
-  .note-text { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2.2vw, 1.45rem); font-style: italic; color: var(--snow); line-height: 1.7; }
+  .note-text { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 2vw, 1.3rem); font-style: italic; color: var(--snow); line-height: 1.7; }
   .note-sig { margin-top: 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
 
   /* SHARED */
   .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
-  h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 400; color: var(--snow); line-height: 1.2; margin-bottom: 1.2rem; }
+  h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; color: var(--snow); line-height: 1.2; margin-bottom: 1rem; }
   h2 em { font-style: italic; color: var(--mist); }
-  .gold-line { width: 38px; height: 1px; background: var(--gold); margin: 1.1rem 0; }
-  p.body { font-weight: 300; color: rgba(244,241,235,0.72); line-height: 1.8; max-width: 560px; }
+  .gold-line { width: 38px; height: 1px; background: var(--gold); margin: 1rem 0; }
+  p.body { font-weight: 300; color: rgba(244,241,235,0.72); line-height: 1.8; max-width: 580px; }
 
-  /* PHOTO GRID */
-  .photo-section { background: #111; padding: 5rem 0 0; }
-  .photo-section-intro { padding: 0 2rem 3.5rem; max-width: 900px; margin: 0 auto; }
-  .photo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 320px 280px; gap: 3px; }
-  @media(max-width:700px){ .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; } .photo-card:nth-child(1) { grid-column: 1/3; } }
-  .photo-card { position: relative; overflow: hidden; }
-  .photo-card:nth-child(1) { grid-column: 1/3; grid-row: 1; }
-  .photo-card:nth-child(2) { grid-column: 3; grid-row: 1; }
-  .photo-card:nth-child(3) { grid-column: 4; grid-row: 1; }
-  .photo-card:nth-child(4) { grid-column: 1/3; grid-row: 2; }
-  .photo-card:nth-child(5) { grid-column: 3/5; grid-row: 2; }
-  .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s ease; filter: brightness(0.85) saturate(1.1); }
-  .photo-card:hover img { transform: scale(1.06); filter: brightness(0.95) saturate(1.15); }
-  .photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 55%); pointer-events: none; }
-  .photo-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem 1.1rem; pointer-events: none; }
-  .photo-tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(200,168,75,0.5); padding: 2px 8px; border-radius: 2px; margin-bottom: 0.4rem; }
-  .photo-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; line-height: 1.3; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
-  .photo-desc { font-size: 0.76rem; font-weight: 300; color: rgba(255,255,255,0.68); margin-top: 0.25rem; line-height: 1.5; }
+  /* NARRATIVE FLOW */
+  .narrative { background: var(--charcoal); padding: 5rem 2rem; text-align: center; }
+  .narrative-inner { max-width: 700px; margin: 0 auto; }
+  .narrative h2 { margin-bottom: 1.5rem; }
+  .narrative .body { max-width: 600px; margin: 0 auto; text-align: center; font-size: 1.05rem; }
+  .narrative-steps { display: flex; flex-direction: column; gap: 0; margin-top: 3.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .narrative-step { display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.5rem 0; border-bottom: 1px solid rgba(244,241,235,0.07); text-align: left; }
+  .narrative-step:last-child { border-bottom: none; }
+  .step-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); opacity: 0.5; line-height: 1; flex-shrink: 0; width: 42px; }
+  .step-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--snow); margin-bottom: 0.35rem; }
+  .step-body { font-size: 0.86rem; font-weight: 300; color: rgba(244,241,235,0.65); line-height: 1.7; }
+
+  /* WHY SEPTEMBER */
+  .why-section { background: var(--pine); padding: 5rem 2rem; }
+  .why-inner { max-width: 980px; margin: 0 auto; }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .why-card { border-left: 2px solid var(--gold); padding: 0 0 0 1.25rem; }
+  .why-icon { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.35rem; opacity: 0.7; }
+  .why-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--snow); margin-bottom: 0.45rem; }
+  .why-body { font-size: 0.83rem; font-weight: 300; color: rgba(244,241,235,0.62); line-height: 1.7; }
+
+  /* PHOTO MOSAIC - Rainier */
+  .photo-mosaic { display: grid; gap: 3px; background: #111; }
+  .photo-mosaic-top { grid-template-columns: 2fr 1fr 1fr; height: 400px; }
+  .photo-mosaic-mid { grid-template-columns: 1fr 1fr 1fr 1fr; height: 300px; margin-top: 3px; }
+  .photo-mosaic-bot { grid-template-columns: 1fr 1fr; height: 340px; margin-top: 3px; }
+  .pm-card { position: relative; overflow: hidden; }
+  .pm-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s ease; filter: brightness(0.87) saturate(1.1); }
+  .pm-card:hover img { transform: scale(1.05); filter: brightness(0.96) saturate(1.15); }
+  .pm-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%); pointer-events: none; }
+  .pm-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; pointer-events: none; }
+  .pm-tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(200,168,75,0.45); padding: 2px 7px; border-radius: 2px; margin-bottom: 0.3rem; }
+  .pm-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; line-height: 1.3; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+  .pm-desc { font-size: 0.73rem; font-weight: 300; color: rgba(255,255,255,0.65); margin-top: 0.2rem; line-height: 1.4; }
+  .photo-section-header { background: #111; padding: 5rem 2rem 2.5rem; }
+  .photo-section-header-inner { max-width: 900px; margin: 0 auto; }
 
   /* STATS */
-  .stats-bar { background: var(--moss); padding: 3rem 2rem; border-top: 1px solid rgba(200,168,75,0.15); border-bottom: 1px solid rgba(200,168,75,0.15); }
-  .stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 2rem; text-align: center; }
-  .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.22rem; }
-  .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,235,0.48); }
+  .stats-bar { background: var(--moss); padding: 2.5rem 2rem; }
+  .stats-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 1.5rem; text-align: center; }
+  .stat-number { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.2rem; }
+  .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(244,241,235,0.45); }
 
-  /* HIKES */
-  .hikes-section { background: var(--charcoal); padding: 6rem 2rem; }
-  .hikes-inner { max-width: 900px; margin: 0 auto; }
-  .hike-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-  .hike-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(244,241,235,0.08); border-radius: 4px; padding: 1.5rem; }
-  .hike-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.06em; color: var(--snow); margin-bottom: 0.3rem; }
-  .hike-area { font-family: 'Barlow Condensed', sans-serif; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
-  .hike-desc { font-size: 0.85rem; font-weight: 300; color: rgba(244,241,235,0.65); line-height: 1.7; }
+  /* HIKES - centered */
+  .hikes-section { background: var(--charcoal); padding: 5rem 2rem; text-align: center; }
+  .hikes-inner { max-width: 1000px; margin: 0 auto; }
+  .hike-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 3rem; text-align: left; }
+  .hike-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(244,241,235,0.08); border-radius: 4px; padding: 1.4rem; }
+  .hike-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.06em; color: var(--snow); margin-bottom: 0.2rem; }
+  .hike-area { font-family: 'Barlow Condensed', sans-serif; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.65rem; }
+  .hike-desc { font-size: 0.83rem; font-weight: 300; color: rgba(244,241,235,0.62); line-height: 1.7; }
 
   /* SPARTAN */
-  .spartan-wrap { display: grid; grid-template-columns: 1fr 1fr; max-width: 1200px; margin: 0 auto; }
-  @media(max-width:700px){ .spartan-wrap { grid-template-columns: 1fr; } }
-  .spartan-text { padding: 5rem 3rem 5rem 2rem; display: flex; flex-direction: column; justify-content: center; background: var(--pine); }
-  .spartan-photo { position: relative; min-height: 420px; overflow: hidden; }
-  .spartan-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.72) saturate(1.1); }
-  .spartan-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(212,84,26,0.22) 0%, transparent 60%); }
-  .badge-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; z-index: 2; }
-  .badge-ring { width: 200px; height: 200px; border-radius: 50%; border: 2px solid var(--ember); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; position: relative; backdrop-filter: blur(4px); background: rgba(0,0,0,0.38); }
-  .badge-ring::before { content:''; position:absolute; inset:8px; border-radius:50%; border:1px solid rgba(212,84,26,0.3); }
-  .badge-top { font-family:'Barlow Condensed',sans-serif; font-size:0.56rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.5); }
-  .badge-name { font-family:'Playfair Display',serif; font-size:1.75rem; font-weight:700; color:var(--ember); }
+  .spartan-intro { background: #0d0d0d; padding: 5rem 2rem 2.5rem; text-align: center; }
+  .champ-badge { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ember); border: 1px solid rgba(212,84,26,0.45); padding: 5px 16px; border-radius: 2px; margin-bottom: 1.2rem; }
+  .spartan-photo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3px; background: #0d0d0d; }
+  .spartan-photo-grid-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: #0d0d0d; padding-top: 3px; }
+  @media(max-width:650px){ .spartan-photo-grid { grid-template-columns: 1fr 1fr; } .spartan-photo-grid-row2 { grid-template-columns: 1fr 1fr; } }
+  .s-card { position: relative; overflow: hidden; height: 280px; }
+  .s-card img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.78) saturate(1.15); transition: transform 0.7s ease; }
+  .s-card:hover img { transform: scale(1.05); }
+  .s-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 50%); }
+  .s-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; }
+  .s-tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.54rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ember); border: 1px solid rgba(212,84,26,0.4); padding: 2px 7px; border-radius: 2px; margin-bottom: 0.28rem; }
+  .s-cap { font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 600; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
+  .spartan-details { background: #0d0d0d; padding: 3rem 2rem 5rem; }
+  .spartan-details-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  @media(max-width:700px){ .spartan-details-inner { grid-template-columns: 1fr; } }
+  .detail-row { display: flex; gap: 1rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid rgba(244,241,235,0.06); }
+  .detail-row:last-of-type { border-bottom: none; }
+  .detail-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); min-width: 78px; padding-top: 2px; flex-shrink: 0; }
+  .detail-val { font-size: 0.86rem; font-weight: 300; color: rgba(244,241,235,0.78); line-height: 1.5; }
+  .register-btn { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #fff; background: var(--ember); padding: 0.9rem 2.2rem; border-radius: 2px; text-decoration: none; margin-top: 1.5rem; transition: background 0.2s, transform 0.15s; }
+  .register-btn:hover { background: #b83a12; transform: translateY(-2px); }
+  .badge-wrap-center { display: flex; flex-direction: column; align-items: center; }
+  .badge-ring { width: 210px; height: 210px; border-radius: 50%; border: 2px solid var(--ember); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; position: relative; background: rgba(212,84,26,0.07); }
+  .badge-ring::before { content:''; position:absolute; inset:9px; border-radius:50%; border:1px solid rgba(212,84,26,0.22); }
+  .badge-top { font-family:'Barlow Condensed',sans-serif; font-size:0.54rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.4); }
+  .badge-name { font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:700; color:var(--ember); }
   .badge-dist { font-family:'Barlow Condensed',sans-serif; font-size:2.8rem; font-weight:700; color:#fff; line-height:1; }
-  .badge-unit { font-family:'Barlow Condensed',sans-serif; font-size:0.82rem; letter-spacing:0.12em; color:rgba(255,255,255,0.52); text-transform:uppercase; }
-  .badge-date { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-top:1.2rem; }
+  .badge-unit { font-family:'Barlow Condensed',sans-serif; font-size:0.78rem; letter-spacing:0.12em; color:rgba(255,255,255,0.4); text-transform:uppercase; }
+  .badge-obs { font-family:'Barlow Condensed',sans-serif; font-size:0.62rem; letter-spacing:0.15em; color:var(--gold); text-transform:uppercase; margin-top:3px; }
+  .badge-sub { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(244,241,235,0.35); margin-top:1.2rem; text-align:center; }
 
   /* CTA */
   .cta-section { position: relative; padding: 7rem 2rem; text-align: center; overflow: hidden; }
-  .cta-bg { position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1599551528722-6b6d968512a2?fm=jpg&q=75&w=1800&auto=format&fit=crop'); background-size:cover; background-position:center 30%; filter:brightness(0.25) saturate(0.8); }
+  .cta-bg { position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1599551528722-6b6d968512a2?fm=jpg&q=80&w=1800&auto=format&fit=crop'); background-size:cover; background-position:center 30%; filter:brightness(0.2) saturate(0.8); }
   .cta-content { position:relative; z-index:2; }
-  .cta-section h2 { max-width:560px; margin:0 auto 1rem; }
-  .cta-p { max-width:460px; margin:0 auto 2.5rem; font-weight:300; color:rgba(255,255,255,0.8); line-height:1.8; }
+  .cta-section h2 { max-width:580px; margin:0 auto 1rem; }
+  .cta-p { max-width:480px; margin:0 auto 2.5rem; font-weight:300; color:rgba(255,255,255,0.78); line-height:1.8; }
   .cta-btn { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--charcoal); background:var(--gold); padding:1rem 3rem; border-radius:2px; text-decoration:none; transition:background 0.2s,transform 0.15s; }
   .cta-btn:hover { background:#d4b55a; transform:translateY(-2px); }
-  .cta-note { display:block; margin-top:1.2rem; font-family:'Barlow Condensed',sans-serif; font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.3); }
-
-  footer { background:#0a0a0a; padding:2rem; text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(244,241,235,0.15); }
-
-  .fade-in { opacity:0; transform:translateY(16px); transition:opacity 0.75s ease, transform 0.75s ease; }
-  .fade-in.visible { opacity:1; transform:translateY(0); }
+  .cta-note { display:block; margin-top:1.1rem; font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.25); }
+  footer { background:#080808; padding:2rem; text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase; color:rgba(244,241,235,0.12); }
 </style>
 </head>
 <body>
@@ -119,11 +151,11 @@
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">This one's for you</p>
-    <div class="hero-names">Nicole &amp; John</div>
-    <h1 class="hero-title">Mount <em>Rainier</em> &amp; a Spartan Race</h1>
-    <p class="hero-subtitle">National Park · Washington State · September 20, 2025</p>
-    <p class="hero-desc">One of America's most stunning National Parks — paired with a Spartan Race 50 miles from its entrance. Alpine trails, fire-red meadows, a 14,411-foot volcano. I'm going. Come with me.</p>
+    <p class="hero-from">Nicole &amp; John</p>
+    <div class="hero-names">I present<br>to you</div>
+    <p class="hero-present">↓</p>
+    <p class="hero-title">Mt. Rainier <em>National Park</em> Weekend<br>+ Spartan Race</p>
+    <p class="hero-subtitle">Washington State &nbsp;·&nbsp; September 19–20, 2026</p>
   </div>
   <div class="scroll-cue">
     <span>Keep scrolling</span>
@@ -137,176 +169,341 @@
     <div class="note-avatar">CG</div>
     <div>
       <p class="note-label">From Chris G</p>
-      <p class="note-text">"Okay hear me out. There's a Spartan Race in Monroe, Washington on September 20th — and it sits about 50 miles from Mount Rainier National Park, one of the most beautiful places in the country. We're talking a 14,411-foot volcano with alpine meadows that turn crimson and gold in mid-September, world-class hiking trails, and almost zero crowds. We race Saturday, we explore the park the other days. I'm going. I want you both there."</p>
+      <p class="note-text">"There's a Spartan Race in Monroe, Washington the weekend of September 19–20, 2026 — and it sits about 50 miles from Mount Rainier National Park. We're talking a 14,411-foot active volcano with alpine meadows that turn crimson and gold in mid-September, world-class hiking, waterfalls, wildlife, and almost zero crowds. We land, we head straight to the park, we hike, catch sunrises and sunsets, and have an absolute blast — then we cap the trip with Sunday Funday at the Spartan Race. I'm going. I want you both there."</p>
       <p class="note-sig">— Chris Greenidge &nbsp;·&nbsp; St. Petersburg, FL</p>
     </div>
   </div>
 </div>
 
-<!-- PHOTO GRID -->
-<section class="photo-section">
-  <div class="photo-section-intro fade-in">
-    <p class="section-label">Why September</p>
-    <h2>The mountain at its most <em>alive</em></h2>
-    <div class="gold-line"></div>
-    <p class="body">Mid-September is Rainier's best-kept secret. The summer crowds are gone, the alpine meadows ignite with fall color — deep reds, burnt oranges, gold — and the snowcap glows against crisp blue skies. Most people never see it like this.</p>
-  </div>
-  <div class="photo-grid">
-    <div class="photo-card">
-      <img src="https://images.unsplash.com/photo-1573331592635-f658507c1e8c?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Mount Rainier fall meadow" loading="lazy">
-      <div class="photo-overlay"></div>
-      <div class="photo-body">
-        <span class="photo-tag">Paradise Meadows</span>
-        <div class="photo-title">Crimson huckleberry fields</div>
-        <p class="photo-desc">Acres of alpine meadow turn deep red and gold around the summit.</p>
-      </div>
+<!-- NARRATIVE STEPS -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="fade-in">
+      <p class="section-label" style="text-align:center;">The Plan</p>
+      <h2>How this trip <em>goes</em></h2>
+      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <p class="body" style="text-align:center; margin: 0 auto;">We land. We head to the park. We enjoy every minute of it. Then Sunday we race.</p>
     </div>
-    <div class="photo-card">
-      <img src="https://images.unsplash.com/photo-1599551528722-6b6d968512a2?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Mount Rainier reflection" loading="lazy">
-      <div class="photo-overlay"></div>
-      <div class="photo-body">
-        <span class="photo-tag">Reflection Lakes</span>
-        <div class="photo-title">Mirror-still at dawn</div>
+    <div class="narrative-steps">
+      <div class="narrative-step fade-in">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">We Land &amp; Head to the Park</div>
+          <p class="step-body">Fly into Seattle-Tacoma, grab a rental, and drive straight toward the Cascades. Mount Rainier is about 2 hours from the airport. The mountain starts appearing through the windshield about halfway there. It's massive. Nothing prepares you for it.</p>
+        </div>
       </div>
-    </div>
-    <div class="photo-card">
-      <img src="https://images.unsplash.com/photo-1609952543213-4f99db0cf71d?fm=jpg&q=80&w=600&auto=format&fit=crop&crop=top" alt="Mount Rainier summit" loading="lazy">
-      <div class="photo-overlay"></div>
-      <div class="photo-body">
-        <span class="photo-tag">The Summit</span>
-        <div class="photo-title">14,411 feet of volcano</div>
+      <div class="narrative-step fade-in">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Hikes, Sunrises &amp; Sunsets</div>
+          <p class="step-body">Days in the park are ours — Skyline Loop, Reflection Lakes at dawn, Naches Peak, Myrtle Falls. September means the meadows are red and gold, the trails are empty, and the light is incredible. Early morning at Reflection Lakes with Rainier doubled in still water is something you remember forever.</p>
+        </div>
       </div>
-    </div>
-    <div class="photo-card">
-      <img src="https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Pacific Northwest fall forest trail" loading="lazy">
-      <div class="photo-overlay"></div>
-      <div class="photo-body">
-        <span class="photo-tag">Old-Growth Forest</span>
-        <div class="photo-title">Ancient evergreen trails</div>
-        <p class="photo-desc">91,000 acres of old-growth forest ring the mountain's base.</p>
+      <div class="narrative-step fade-in">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">We Have an Absolute Blast</div>
+          <p class="step-body">This isn't a grueling outdoors trip — it's a beautiful one. Cool crisp air, almost no crowds, wildlife everywhere, views that don't look real. We eat well, sleep well, and soak in one of the most spectacular places in the country.</p>
+        </div>
       </div>
-    </div>
-    <div class="photo-card">
-      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Mount Rainier alpine view" loading="lazy">
-      <div class="photo-overlay"></div>
-      <div class="photo-body">
-        <span class="photo-tag">Sunrise Area · 6,400 ft</span>
-        <div class="photo-title">Highest road in Washington</div>
-        <p class="photo-desc">360° Cascade views — no crowds, just golden September light.</p>
+      <div class="narrative-step fade-in">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-title">Sunday Funday — Spartan Race</div>
+          <p class="step-body">Sunday September 20th we drive ~50 miles to Monroe and race the Spartan Super 10K. Mud, obstacles, evergreen forest trails, Cascade Mountain backdrop. After everything we've seen that weekend, crossing that finish line is going to feel even better.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- WHY MID-SEPTEMBER -->
+<section class="why-section">
+  <div class="why-inner">
+    <div class="fade-in" style="text-align:center;">
+      <p class="section-label" style="text-align:center;">Why This Timing is Perfect</p>
+      <h2 style="text-align:center;">Mid-September is <em>the sweet spot</em></h2>
+      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <p class="body" style="max-width:600px; margin: 0 auto; text-align:center;">Everyone visits Rainier in July and August. We're going when it's actually at its most beautiful — and most peaceful.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-icon">01</div>
+        <div class="why-title">Fall Colors Peak</div>
+        <p class="why-body">Mid-September marks the start of fall at Rainier. Huckleberry fields turn deep crimson, vine maples go orange and gold, and the meadows at Paradise and Sunrise blaze with color against the white snowcap.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">02</div>
+        <div class="why-title">Crowds Disappear</div>
+        <p class="why-body">After Labor Day the summer visitors vanish. The same trails that had packed parking lots in August are nearly empty. You'll have iconic hikes like the Skyline Loop almost entirely to yourself.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">03</div>
+        <div class="why-title">All Trails Open</div>
+        <p class="why-body">Every major trail — Paradise, Sunrise, Chinook Pass, Wonderland — is fully accessible in mid-September. By late October many high-elevation routes close for snow. This is the last sweet window before winter.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">04</div>
+        <div class="why-title">Perfect Weather</div>
+        <p class="why-body">Daytime highs around 60°F at lower elevations — crisp, clear, and ideal for hiking. September is one of the drier months in the park. Cool enough to feel like fall, warm enough to spend all day outside.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">05</div>
+        <div class="why-title">Wildlife Active</div>
+        <p class="why-body">Animals are stocking up for winter and are more visible than any other time of year. Marmots, mountain goats, deer, and elk are commonly spotted on September trails — especially at Sunrise.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">06</div>
+        <div class="why-title">No Reservations</div>
+        <p class="why-body">No timed entry reservations needed in 2026. Just show up. The $30 vehicle pass covers 7 days in the park — or grab an America the Beautiful annual pass for $80 and visit as many parks as you want all year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO MOSAIC -->
+<div class="photo-section-header">
+  <div class="photo-section-header-inner fade-in">
+    <p class="section-label">The Mountain</p>
+    <h2>Mount Rainier <em>National Park</em></h2>
+    <div class="gold-line"></div>
+    <p class="body">Established in 1899. 236,000 acres of old-growth forest, alpine meadows, glaciers, and waterfalls surrounding a 14,411-foot active volcano — the most glaciated peak in the contiguous United States.</p>
+  </div>
+</div>
+
+<!-- Row 1: 3 photos -->
+<div class="photo-mosaic photo-mosaic-top">
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-1573331592635-f658507c1e8c?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Mount Rainier fall meadow" loading="lazy">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Paradise Meadows</span>
+      <div class="pm-title">Crimson huckleberry fields at the summit</div>
+      <p class="pm-desc">Alpine meadows blaze red and gold every mid-September.</p>
+    </div>
+  </div>
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-1599551528722-6b6d968512a2?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Mount Rainier reflection lake" loading="lazy">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Reflection Lakes</span>
+      <div class="pm-title">Mirror-still at dawn</div>
+    </div>
+  </div>
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Mount Rainier alpine" loading="lazy">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Sunrise · 6,400 ft</span>
+      <div class="pm-title">Highest road in Washington</div>
+    </div>
+  </div>
+</div>
+
+<!-- Row 2: 4 photos -->
+<div class="photo-mosaic photo-mosaic-mid">
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Pacific Northwest trail" loading="lazy">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Wonderland Trail</span>
+      <div class="pm-title">Old-growth forest</div>
+    </div>
+  </div>
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-GCYqLzDpoOM?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Mount Rainier forest road" loading="lazy"
+         onerror="this.src='https://images.unsplash.com/photo-1502780402662-acc01917949e?fm=jpg&q=80&w=500&auto=format&fit=crop'">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Forest Drive</span>
+      <div class="pm-title">Into the Cascades</div>
+    </div>
+  </div>
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-Aq7id0ZjEW4?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Mount Rainier night" loading="lazy"
+         onerror="this.src='https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fm=jpg&q=80&w=500&auto=format&fit=crop'">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Night Sky</span>
+      <div class="pm-title">Stargazing above the clouds</div>
+    </div>
+  </div>
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-LFGGCsj41Bc?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Mount Rainier hiker" loading="lazy"
+         onerror="this.src='https://images.unsplash.com/photo-1551632811-561732d1e306?fm=jpg&q=80&w=500&auto=format&fit=crop'">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Skyline Loop</span>
+      <div class="pm-title">In awe</div>
+    </div>
+  </div>
+</div>
+
+<!-- Row 3: 2 wide photos -->
+<div class="photo-mosaic photo-mosaic-bot">
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-V1X5vAlNBsc?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Myrtle Falls Mount Rainier" loading="lazy"
+         onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=jpg&q=80&w=800&auto=format&fit=crop&crop=entropy'">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Myrtle Falls</span>
+      <div class="pm-title">Waterfalls with Rainier as the backdrop</div>
+      <p class="pm-desc">One of the most iconic spots in any national park in the US.</p>
+    </div>
+  </div>
+  <div class="pm-card">
+    <img src="https://images.unsplash.com/photo-S2uQdHTXbbc?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Mount Rainier sunset" loading="lazy"
+         onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=jpg&q=80&w=800&auto=format&fit=crop'">
+    <div class="pm-overlay"></div>
+    <div class="pm-body">
+      <span class="pm-tag">Sunset</span>
+      <div class="pm-title">The mountain glows pink and gold</div>
+      <p class="pm-desc">September sunsets at Paradise are otherworldly.</p>
+    </div>
+  </div>
+</div>
 
 <!-- STATS -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="fade-in"><div class="stat-number">14,411</div><div class="stat-label">Feet of Summit</div></div>
-    <div class="fade-in"><div class="stat-number">~60°</div><div class="stat-label">Sept Daytime High (°F)</div></div>
-    <div class="fade-in"><div class="stat-number">91K</div><div class="stat-label">Acres Old-Growth Forest</div></div>
-    <div class="fade-in"><div class="stat-number">~50 mi</div><div class="stat-label">From the Race in Monroe</div></div>
+    <div class="fade-in"><div class="stat-number">14,411</div><div class="stat-label">Feet Summit</div></div>
+    <div class="fade-in"><div class="stat-number">~60°</div><div class="stat-label">Sept High °F</div></div>
+    <div class="fade-in"><div class="stat-number">236K</div><div class="stat-label">Acres Protected</div></div>
+    <div class="fade-in"><div class="stat-number">91K</div><div class="stat-label">Old-Growth Acres</div></div>
+    <div class="fade-in"><div class="stat-number">~50mi</div><div class="stat-label">From The Race</div></div>
+    <div class="fade-in"><div class="stat-number">1899</div><div class="stat-label">Est. as NP</div></div>
   </div>
 </div>
 
-<!-- HIKES -->
+<!-- HIKES - centered -->
 <section class="hikes-section">
   <div class="hikes-inner">
     <div class="fade-in">
-      <p class="section-label">On the Mountain</p>
-      <h2>Trails worth every <em>step</em></h2>
-      <div class="gold-line"></div>
-      <p class="body">Rainier has trails for every level. In mid-September the fall color is peaking and you'll have the paths mostly to yourself.</p>
+      <p class="section-label">What the Park Has to Offer</p>
+      <h2>Trails, waterfalls &amp; <em>views</em></h2>
+      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <p class="body" style="margin: 0 auto; text-align:center;">Something for every level. All of these are at their most beautiful and least crowded in mid-September.</p>
     </div>
     <div class="hike-grid">
       <div class="hike-card fade-in">
         <div class="hike-name">Skyline Loop Trail</div>
-        <div class="hike-area">Paradise Area</div>
-        <p class="hike-desc">The classic Rainier hike. Stunning fall foliage, panoramic views of the summit, and sweeping sightlines of the Tatoosh Range. Tough elevation gain, absolutely worth it.</p>
+        <div class="hike-area">Paradise · 5.5 miles · Moderate-Hard</div>
+        <p class="hike-desc">The crown jewel. Loops above the treeline through meadows that turn red and orange in September, with unobstructed summit views the entire way. John Muir called Paradise "the most luxuriant and most extravagantly beautiful of all the alpine gardens I ever beheld."</p>
       </div>
       <div class="hike-card fade-in">
-        <div class="hike-name">Alta Vista Trail</div>
-        <div class="hike-area">Paradise Area</div>
-        <p class="hike-desc">A shorter loop through meadows in full autumn color. Red huckleberry and vine maple against the white snowcap — this is the postcard view of Rainier.</p>
+        <div class="hike-name">Naches Peak Loop</div>
+        <div class="hike-area">Chinook Pass · 3 miles · Easy-Moderate</div>
+        <p class="hike-desc">One of the most picture-perfect short hikes in the park. Huckleberry meadows, Tipsoo Lake views, and Rainier looming overhead the whole way. One of the best fall color hikes in Washington state.</p>
       </div>
       <div class="hike-card fade-in">
         <div class="hike-name">Reflection Lakes</div>
-        <div class="hike-area">Paradise Corridor</div>
-        <p class="hike-desc">At dawn the lakes go perfectly still and Rainier doubles in the water. One of the most photographed spots in the Pacific Northwest — and completely different in real life.</p>
+        <div class="hike-area">Paradise Corridor · Easy Walk</div>
+        <p class="hike-desc">At dawn the lakes go glass-still and Rainier's full 14,411-foot profile doubles in the water. One of the most photographed spots in the Pacific Northwest — hits completely different in person.</p>
       </div>
       <div class="hike-card fade-in">
-        <div class="hike-name">Sunrise Area Trails</div>
-        <div class="hike-area">Northeast Rainier · 6,400 ft</div>
-        <p class="hike-desc">The highest point accessible by car in the park. The views from here stretch across the entire Cascade Range. September means golden larch and almost zero crowds.</p>
+        <div class="hike-name">Myrtle Falls</div>
+        <div class="hike-area">Paradise · 0.4 miles · Easy</div>
+        <p class="hike-desc">Short walk from the Paradise visitor center to a stunning waterfall with Rainier framed directly behind it. One of the most iconic photo spots in any national park in the country.</p>
+      </div>
+      <div class="hike-card fade-in">
+        <div class="hike-name">Burroughs Mountain</div>
+        <div class="hike-area">Sunrise · 4.7–7 miles · Moderate</div>
+        <p class="hike-desc">Sweeping views of Rainier's north face from tundra terrain. Marmots everywhere in September. Choose First or Second Burroughs depending on how your legs feel. Worth every step.</p>
+      </div>
+      <div class="hike-card fade-in">
+        <div class="hike-name">Summerland Trail</div>
+        <div class="hike-area">Sunrise · 10.1 miles · Moderate</div>
+        <p class="hike-desc">Climbs to an open meadow blazing with fall foliage with Rainier's summit towering above. One of the best all-day hikes in the park. Almost no one else on the trail after Labor Day.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPARTAN -->
-<section style="padding:0; background:#0d0d0d;">
-  <div style="max-width:1200px; margin:0 auto; padding: 5rem 2rem 3rem; text-align:center;" class="fade-in">
-    <p class="section-label" style="text-align:center;">The Mission</p>
-    <h2 style="text-align:center; max-width:700px; margin:0 auto 1rem;">Then we <em>race</em></h2>
-    <div class="gold-line" style="margin:1rem auto 1.5rem;"></div>
-    <p class="body" style="max-width:620px; margin:0 auto; text-align:center;">The Spartan Race Seattle is held in Monroe, WA — about 50 miles from Mount Rainier's entrance. Wooded evergreen trails, mud, obstacles, the whole thing. We race September 20th, then the mountain is our reward.</p>
-  </div>
+<!-- SPARTAN INTRO -->
+<div class="spartan-intro fade-in">
+  <span class="champ-badge">★ North American Championship Weekend ★</span>
+  <p class="section-label" style="text-align:center;">Sunday Funday</p>
+  <h2 style="text-align:center;">Then We <em>Race</em></h2>
+  <div class="gold-line" style="margin: 1rem auto;"></div>
+  <p class="body" style="text-align:center; margin: 0 auto; max-width:620px;">Spartan Race Seattle · September 20, 2026 · Monroe, WA. About 50 miles from Rainier's entrance. After everything we've seen that weekend, this finish line is going to feel incredible.</p>
+</div>
 
-  <div class="spartan-wrap">
-    <div class="spartan-photo" style="order:1;">
-      <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Trail running">
-      <div class="spartan-overlay"></div>
-      <div class="badge-wrap">
+<!-- SPARTAN PHOTOS ROW 1 -->
+<div class="spartan-photo-grid">
+  <div class="s-card">
+    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Spartan Race trail running">
+    <div class="s-overlay"></div>
+    <div class="s-body"><span class="s-tag">The Course</span><div class="s-cap">Wooded evergreen trails</div></div>
+  </div>
+  <div class="s-card">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Spartan Race obstacle">
+    <div class="s-overlay"></div>
+    <div class="s-body"><span class="s-tag">Obstacles</span><div class="s-cap">25 obstacles · 10K</div></div>
+  </div>
+  <div class="s-card">
+    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Race finish celebration">
+    <div class="s-overlay"></div>
+    <div class="s-body"><span class="s-tag">The Finish</span><div class="s-cap">Sunday Funday earned</div></div>
+  </div>
+</div>
+
+<!-- SPARTAN PHOTOS ROW 2 -->
+<div class="spartan-photo-grid-row2">
+  <div class="s-card">
+    <img src="https://images.unsplash.com/photo-1544216717-3bbf52512659?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Obstacle course mud race">
+    <div class="s-overlay"></div>
+    <div class="s-body"><span class="s-tag">Mud &amp; Grit</span><div class="s-cap">Every step earned</div></div>
+  </div>
+  <div class="s-card">
+    <img src="https://images.unsplash.com/photo-1604480132736-44c188fe4d20?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Trail race forest cascade">
+    <div class="s-overlay"></div>
+    <div class="s-body"><span class="s-tag">Cascade Foothills</span><div class="s-cap">Mountain all around you</div></div>
+  </div>
+</div>
+
+<!-- SPARTAN DETAILS -->
+<div class="spartan-details">
+  <div class="spartan-details-inner">
+    <div class="fade-in">
+      <p class="section-label">Race Details</p>
+      <h2>Spartan <em>Super 10K</em></h2>
+      <div class="gold-line"></div>
+      <div class="detail-row"><span class="detail-label">Date</span><span class="detail-val">Sunday, September 20, 2026</span></div>
+      <div class="detail-row"><span class="detail-label">Distance</span><span class="detail-val">Super 10K — 25 obstacles</span></div>
+      <div class="detail-row"><span class="detail-label">Venue</span><span class="detail-val">Meadow Wood Equestrian Center, Monroe, WA</span></div>
+      <div class="detail-row"><span class="detail-label">Terrain</span><span class="detail-val">Narrow trails through evergreen forest alongside the Snohomish River — flat and fast, great for all levels</span></div>
+      <div class="detail-row"><span class="detail-label">Weekend</span><span class="detail-val">North American Championship — Sprint, Super, Beast &amp; Kids Race all on the same weekend</span></div>
+      <div class="detail-row"><span class="detail-label">From Rainier</span><span class="detail-val">~50 miles from Mount Rainier National Park entrance</span></div>
+      <a href="https://www.spartan.com/en/races/seattle" class="register-btn" target="_blank">Register at spartan.com ↗</a>
+    </div>
+    <div class="fade-in">
+      <div class="badge-wrap-center">
         <div class="badge-ring">
           <span class="badge-top">Spartan Race · Seattle</span>
           <span class="badge-name">SPARTAN</span>
           <span class="badge-dist">10K</span>
           <span class="badge-unit">Super</span>
+          <span class="badge-obs">25 Obstacles</span>
         </div>
-        <div class="badge-date">September 20, 2025 · Monroe, WA</div>
+        <div class="badge-sub">Sunday · September 20, 2026 · Monroe, WA</div>
       </div>
-    </div>
-    <div class="spartan-text fade-in" style="order:2; background:#0d0d0d;">
-      <p class="section-label">Race Details</p>
-      <h2>Spartan Race <em>Seattle</em></h2>
-      <div class="gold-line"></div>
-      <div style="display:grid; gap:1rem; margin-bottom:1.5rem;">
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Date</span>
-          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">Saturday, September 20, 2025</span>
-        </div>
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Distance</span>
-          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">10K Super — obstacle course race through wooded evergreen trails</span>
-        </div>
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Location</span>
-          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">Monroe, WA — ~50 miles from Mount Rainier National Park</span>
-        </div>
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Terrain</span>
-          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">Cascade Mountain foothills — narrow paths, evergreen forest, Spartan obstacles throughout</span>
-        </div>
-      </div>
-      <a href="https://www.spartan.com/en/races/seattle" style="display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:0.82rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--charcoal); background:var(--ember); padding:0.85rem 2rem; border-radius:2px; text-decoration:none; margin-top:0.5rem;" target="_blank">Register at spartan.com ↗</a>
     </div>
   </div>
-</section>
+</div>
 
 <!-- CTA -->
 <section class="cta-section">
   <div class="cta-bg"></div>
   <div class="cta-content fade-in">
     <p class="section-label" style="text-align:center;">Nicole &amp; John</p>
-    <h2>Are you <em>in?</em></h2>
-    <p class="cta-p">We race September 20th. We see a volcano. We earn a story worth telling. I've already started planning — I just need you two to say yes.</p>
-    <a href="https://www.spartan.com/en/races/seattle" class="cta-btn" target="_blank">Register for the Spartan Race ↗</a>
-    <span class="cta-note">spartan.com &nbsp;·&nbsp; Monroe, WA &nbsp;·&nbsp; Saturday, September 20, 2025</span>
+    <h2>Say <em>yes.</em></h2>
+    <p class="cta-p">A national park most people have never seen — at its most beautiful time of year. Sunrises. Sunsets. Hikes. Then Sunday Funday at the Spartan Race. All I need is a yes from both of you.</p>
+    <a href="https://www.spartan.com/en/races/seattle" class="cta-btn" target="_blank">Register for the Race ↗</a>
+    <span class="cta-note">spartan.com &nbsp;·&nbsp; Monroe, WA &nbsp;·&nbsp; Sunday, September 20, 2026</span>
   </div>
 </section>
 
-<footer>
-  Mount Rainier National Park · Washington State · 14,411 ft · Established 1899 · Photos via Unsplash
-</footer>
+<footer>Mount Rainier National Park · Washington State · Est. 1899 · 236,381 Acres · Photos via Unsplash</footer>
 
 <script>
   const obs = new IntersectionObserver(entries => {
