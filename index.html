@@ -21,7 +21,8 @@
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.72) 100%); }
   .hero-content { position: relative; z-index: 10; text-align: center; padding: 2rem; }
   @keyframes fade-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; animation: fade-up 1s 0.1s ease both; }
+  .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; animation: fade-up 1s 0.1s ease both; }
+  .hero-names { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 7rem); font-weight: 700; color: #fff; line-height: 1; text-shadow: 0 2px 40px rgba(0,0,0,0.6); margin-bottom: 0.5rem; animation: fade-up 1s 0.18s ease both; letter-spacing: -0.01em; }
   .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 400; line-height: 1.0; color: #fff; text-shadow: 0 2px 40px rgba(0,0,0,0.5); margin-bottom: 0.3rem; animation: fade-up 1s 0.22s ease both; }
   .hero-title em { font-style: italic; color: #d0eedd; }
   .hero-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1rem, 2.5vw, 1.5rem); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; animation: fade-up 1s 0.34s ease both; }
@@ -118,10 +119,11 @@
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Nicole &amp; John — I need you on this trip</p>
-    <h1 class="hero-title">Mount <em>Rainier</em></h1>
+    <p class="hero-eyebrow">This one's for you</p>
+    <div class="hero-names">Nicole &amp; John</div>
+    <h1 class="hero-title">Meet <em>Mount Rainier</em></h1>
     <p class="hero-subtitle">National Park · Washington State · September 2025</p>
-    <p class="hero-desc">One of America's most stunning National Parks. A Spartan Race 50 miles from its entrance. Two days of alpine trails, fire-red meadows, and a 14,411-foot volcano — all in one September trip. I'm going. Come with me.</p>
+    <p class="hero-desc">One of America's most stunning National Parks — paired with a Spartan Race 50 miles from its entrance. Alpine trails, fire-red meadows, a 14,411-foot volcano. I'm going. Come with me.</p>
   </div>
   <div class="scroll-cue">
     <span>Keep scrolling</span>
@@ -241,19 +243,16 @@
 </section>
 
 <!-- SPARTAN -->
-<section style="padding:0;">
+<section style="padding:0; background:#0d0d0d;">
+  <div style="max-width:1200px; margin:0 auto; padding: 5rem 2rem 3rem; text-align:center;" class="fade-in">
+    <p class="section-label" style="text-align:center;">The Mission</p>
+    <h2 style="text-align:center; max-width:700px; margin:0 auto 1rem;">Then we <em>race</em></h2>
+    <div class="gold-line" style="margin:1rem auto 1.5rem;"></div>
+    <p class="body" style="max-width:620px; margin:0 auto; text-align:center;">The Spartan Race Seattle is held in Monroe, WA — about 50 miles from Mount Rainier's entrance. Wooded evergreen trails, mud, obstacles, the whole thing. We race September 20th, then the mountain is our reward.</p>
+  </div>
+
   <div class="spartan-wrap">
-    <div class="spartan-text fade-in">
-      <p class="section-label">The Reason We're Going</p>
-      <h2>Spartan Race <em>Seattle</em></h2>
-      <div class="gold-line"></div>
-      <p class="body">The Seattle Spartan is held in Monroe, WA — about 50 miles from Mount Rainier. Wooded evergreen trails, Spartan's legendary obstacle course, Cascade Mountain backdrop. We race on September 20th.</p>
-      <br>
-      <p class="body">The race is the excuse. The mountain is the reward. We do both.</p>
-      <br>
-      <p style="font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;letter-spacing:0.1em;color:var(--gold);">Monroe, WA &nbsp;·&nbsp; Saturday, September 20, 2025</p>
-    </div>
-    <div class="spartan-photo">
+    <div class="spartan-photo" style="order:1;">
       <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Trail running">
       <div class="spartan-overlay"></div>
       <div class="badge-wrap">
@@ -265,6 +264,30 @@
         </div>
         <div class="badge-date">September 20, 2025 · Monroe, WA</div>
       </div>
+    </div>
+    <div class="spartan-text fade-in" style="order:2; background:#0d0d0d;">
+      <p class="section-label">Race Details</p>
+      <h2>Spartan Race <em>Seattle</em></h2>
+      <div class="gold-line"></div>
+      <div style="display:grid; gap:1rem; margin-bottom:1.5rem;">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Date</span>
+          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">Saturday, September 20, 2025</span>
+        </div>
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Distance</span>
+          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">10K Super — obstacle course race through wooded evergreen trails</span>
+        </div>
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Location</span>
+          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">Monroe, WA — ~50 miles from Mount Rainier National Park</span>
+        </div>
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:70px; padding-top:2px;">Terrain</span>
+          <span style="font-weight:300; color:rgba(244,241,235,0.8); font-size:0.92rem;">Cascade Mountain foothills — narrow paths, evergreen forest, Spartan obstacles throughout</span>
+        </div>
+      </div>
+      <a href="https://www.spartan.com/en/races/seattle" style="display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:0.82rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--charcoal); background:var(--ember); padding:0.85rem 2rem; border-radius:2px; text-decoration:none; margin-top:0.5rem;" target="_blank">Register at spartan.com ↗</a>
     </div>
   </div>
 </section>
